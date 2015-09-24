@@ -152,8 +152,12 @@ class Calendar
      */
     public function addEvents($events, array $customAttributes = [])
     {
-        foreach ($events as $event) {
-            $this->eventCollection->push($event, $customAttributes);
+        if(!empty($customAttributes)) {
+            foreach ($events as $event) {
+                $this->eventCollection->push($event, $customAttributes);
+            }
+        } else {
+            $this->eventCollection->merge($events);
         }
 
         return $this;

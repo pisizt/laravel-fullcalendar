@@ -15,9 +15,18 @@ class EventCollection
         $this->events = new Collection();
     }
 
+    public function merge($events)
+    {
+        $this->events = $this->events->merge($events);
+    }
+
     public function push(Event $event, array $customAttributes = [])
     {
-        $this->events->push($this->convertToArray($event, $customAttributes));
+        if(!empty($customAttributes)) {
+            $this->events->push($this->convertToArray($event, $customAttributes));
+        } else {
+            $this->events->push($event);
+        }
     }
 
     public function toJson()
@@ -29,7 +38,7 @@ class EventCollection
     {
         return $this->events->toArray();
     }
-
+    
     private function convertToArray(Event $event, array $customAttributes = [])
     {
         return array_merge([
