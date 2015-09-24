@@ -1,7 +1,13 @@
 {
-    "name": "pisizt/laravel-fullcalendar",
+    "name": "maddhatter/laravel-fullcalendar",
     "description": "Laravel helper for FullCalendar.io",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Shawn Tunney",
+            "email": "shawn.tunney@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "~5.0"
