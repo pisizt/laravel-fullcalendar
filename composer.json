@@ -2,13 +2,7 @@
     "name": "pisizt/laravel-fullcalendar",
     "description": "Laravel helper for FullCalendar.io",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/pisizt/laravel-fullcalendar.git"
-        }
-    ],
-        "require": {
+    "require": {
         "php": ">=5.4.0",
         "illuminate/support": "~5.0"
     },
