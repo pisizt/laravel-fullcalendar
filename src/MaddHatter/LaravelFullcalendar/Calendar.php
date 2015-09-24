@@ -158,6 +158,11 @@ class Calendar
 
         return $this;
     }
+    
+    public function getEvents()
+    {
+        return $this->eventCollection;
+    }
 
     /**
      * Set fullcalendar options
